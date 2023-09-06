@@ -1,0 +1,26 @@
+/* Counter.css */
+
+div {
+  text-align: center;
+  margin: 20px;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

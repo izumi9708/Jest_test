@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter/Counter';
+import ToDoList from './TodoList ';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <p>react jest_test</p>
 
         <Counter initialValue={0}/>
+        <ToDoList/>
       </header>
     </div>
   );

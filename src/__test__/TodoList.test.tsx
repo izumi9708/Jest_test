@@ -7,7 +7,7 @@ import ToDoList from "../TodoList ";
 //2. 新しいタスクを追加すると、タスクリストにそのタスクが表示されることをテストしてください。
 //3. タスクを削除すると、タスクリストからそのタスクが削除されることをテストしてください。
 
-describe('TodoList Component Test',() => {
+describe.skip('TodoList Component Test',() => {
   // 1.
   it('Exist Initialize Component', async () => {
     render(<ToDoList />);

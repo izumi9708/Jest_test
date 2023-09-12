@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter/Counter';
 import ToDoList from './TodoList ';
+import ArticleList from './Article/ArticleList';
+import {initialArticles} from './Article/initialArticle';
+
 
 function App() {
   return (
@@ -12,6 +15,7 @@ function App() {
 
         <Counter initialValue={0}/>
         <ToDoList/>
+        <ArticleList articles={initialArticles}/>
       </header>
     </div>
   );

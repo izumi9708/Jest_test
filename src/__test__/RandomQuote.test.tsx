@@ -51,4 +51,30 @@ describe('RanfomQuote Component Test',() => {
   
   });
 
+
+  // 3.
+  it('shold be change display',async() => {
+    //非同期処理の完了を待ち、ステートにデータが入る前の空の状態にする
+    (fetchData as jest.Mock).mockResolvedValue([]);
+  
+    // ExternalDataComponent をレンダリング
+    render(<ExternalDataComponent/>);
+
+    const initialDisplay = screen.getByText('Loading...');
+    expect(initialDisplay).toBeInTheDocument();
+
+    const res = [{ id: 1, name: 'a' }, { id: 2, name: 'b' }];
+    (fetchData as jest.Mock).mockResolvedValue(res);
+
+    render(<ExternalDataComponent/>)
+
+    await waitFor(() => {
+      const changeDisplay = screen.getAllByRole('listitem');
+      
+      changeDisplay.forEach(item => expect(item).toBeInTheDocument());
+    })
+    
+    })
+  
+
 })
